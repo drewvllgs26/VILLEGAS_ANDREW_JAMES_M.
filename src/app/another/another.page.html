@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Another</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content style = "background-color: aqua;"[fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Another</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div style="text-align: center; font-size: 20px; margin-top: 30vh;">
+    <strong>Welcome to Another page!<br>Please select a button</strong> 
+    <p><ion-button href="third-page">go by link</ion-button>
+    <ion-button (click)="goByEvent()">go by event</ion-button><br> 
+    <ion-button (click)="goWithAuthorization()">authorize</ion-button></p>
+  </div>
+
+</ion-content>
+
