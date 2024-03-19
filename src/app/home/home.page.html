@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      THREEFOLD
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">THREEFOLD ACT 3</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <strong>PLEASE SELECT A BUTTON</strong>
+    <p>
+      <ion-button (click) = "BeAuthorized()">Authorize</ion-button>
+      <ion-button (click) = "ShowObject()">Show Object</ion-button> </p>
+    <p> <ion-button (click) = "AddObject()">Add to Object</ion-button>
+      <ion-button (click) = "NotAuthorized()">Unauthorize</ion-button>
+    </p>
+    <div *ngIf="WillShow">{{ShowArr}}</div>
+  </div>
+</ion-content>
