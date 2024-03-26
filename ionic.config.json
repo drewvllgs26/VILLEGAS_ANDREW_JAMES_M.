@@ -1,0 +1,7 @@
+{
+  "name": "act5_villegas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
