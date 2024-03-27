@@ -25,3 +25,10 @@
 #container a {
   text-decoration: none;
 }
+
+ion-popover {
+  --backdrop-opacity: 0.6;
+  --box-shadow: 0 5px 10px 0 rgba(163, 133, 233, 0.397);
+  --color: white;
+  --width: 300px;
+}

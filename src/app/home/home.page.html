@@ -13,8 +13,51 @@
     </ion-toolbar>
   </ion-header>
 
+  <ion-button (click)="helloToast()">Hello</ion-button>
+  <ion-button (click)="logOut()">Log out</ion-button>
+  <ion-button id="trigger-button">ABOUT</ion-button>
+  <ion-popover trigger="trigger-button">
+  <ng-template>
+    <ion-content class="ion-padding">Hello, {{username}}! Welcome to my app! <br>
+    My name is <b style="color: blueviolet;">Andrew James M. Villegas</b>, feel free to roam in the page! </ion-content>
+  </ng-template>
+  </ion-popover>
+  <div id ="opening"style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; text-align:center;">
+  4 schools that has the word <br> <b style="color:darkorchid; font-size: large;">PHILIPPINES</b> <br> in their name
+  </div>
+  
+  <ion-searchbar></ion-searchbar>
+  <div *ngFor = "let school of schools; let i = index">
+    <div *ngIf = "i < 4">
+    <ion-card>
+      <img alt="sample picture" src="https://plvnw.files.wordpress.com/2018/02/cropped-27356370_10157167537998378_3936689365366675803_o1.jpg" />
+<ion-card-header color="tertiary" text-align="left">
+        {{school.name}} ({{school.country}})
+</ion-card-header>
+      <ion-card-content color="light">
+        {{school.stateProvince}}<br>
+        {{school.web_pages}}
+      </ion-card-content> 
+    </ion-card>
+  </div>
+  </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="tertiary">
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    
+  </ion-fab>
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
   </div>
 </ion-content>
