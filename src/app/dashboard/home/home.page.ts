@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthenticationService } from '../authentication.service';
-import { School } from '../model/model';
+import { AuthenticationService } from '../../authentication.service';
+import { School } from '../../model/model';
 import { ToastController } from '@ionic/angular';
 
 @Component({

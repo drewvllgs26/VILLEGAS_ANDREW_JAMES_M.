@@ -10,7 +10,17 @@ const routes: Routes = [
     children:[
       {
         path: 'home',
-        loadChildren: () => import('../home/home.module').then( m => m.HomePageModule)
+        loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+      },
+    ]
+  },
+  {
+    path: '',
+    component: DashboardPage,
+    children:[
+      {
+        path: 'calculator',
+        loadChildren: () => import('./calculator/calculator.module').then( m => m.CalculatorPageModule)
       },
     ]
   }

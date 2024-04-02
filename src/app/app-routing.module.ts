@@ -5,7 +5,7 @@ import { AuthenticationService } from './authentication.service';
 const routes: Routes = [
   {
     path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule),
+    loadChildren: () => import('./dashboard/home/home.module').then( m => m.HomePageModule),
     canActivate:[AuthenticationService]
   },
   {
@@ -26,6 +26,11 @@ const routes: Routes = [
   {
     path: 'component',
     loadChildren: () => import('./component/component.module').then( m => m.ComponentPageModule)
+  },
+  {
+    path: 'calculator',
+    loadChildren: () => import('./dashboard/calculator/calculator.module').then( m => m.CalculatorPageModule),
+    canActivate:[AuthenticationService]
   },
 ];
 
