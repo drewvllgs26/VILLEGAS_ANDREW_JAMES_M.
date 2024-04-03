@@ -11,7 +11,7 @@ import { AuthenticationService } from '../authentication.service';
 export class LoginPage implements OnInit {
   username : string = ''
   password : string = ''
-  userCredentials = [{name:'admin', pw: 'password'},{name:'user1', pw: 'user1'},{name:'1', pw: '1'},{name:'Andrew', pw: '1'}]
+  userCredentials = [{name:'admin', pw: 'password'},{name:'user1', pw: 'user1'},{name:'Andrew', pw: 'villegas'}]
   constructor(private alertCtrl:AlertController, private rawter:Router, private awtenticate:AuthenticationService, private toastCtrl:ToastController) { }
 
   ngOnInit() {

@@ -11,11 +11,11 @@
     </ion-toolbar>
   </ion-header>
   <div id="container">
-    <ion-card style="color: white;">
-  <ion-input label="Username" [(ngModel)]="username" type="text" label-placement="floating" fill="solid"></ion-input>
-  <ion-input label="Password" [(ngModel)]="password" type="password" label-placement="floating" fill="solid"></ion-input>
-  <ion-button expand="block" (click)="login()">Login</ion-button>
+    <ion-card style="color: white; font-size: 15px;">
+  <ion-input style="padding-left:20px" label="Username" [(ngModel)]="username" type="text" label-placement="floating" fill="solid"></ion-input>
+  <ion-input style="padding-left:20px" label="Password" [(ngModel)]="password" type="password" label-placement="floating" fill="solid"></ion-input>
 </ion-card>
+<ion-button color="tertiary" expand="block" (click)="login()">Login</ion-button>
   </div>
   
 

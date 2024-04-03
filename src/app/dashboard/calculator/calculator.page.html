@@ -10,4 +10,40 @@
       <ion-title size="large">calculator</ion-title>
     </ion-toolbar>
   </ion-header>
+<div id = "answer">
+<ion-list>
+<ion-input style="font-size: 40px;" [(ngModel)]="result" type="text"></ion-input>
+</ion-list>
+</div>
+<ion-list>
+<span style="font-size: 15px;">History</span>
+<ion-input style="font-size: 20px;" value={{historyText}}></ion-input>
+</ion-list>
+<ion-grid>
+<ion-button color="tertiary" (click)="numBtn(7)">7</ion-button>
+<ion-button color="tertiary" (click)="numBtn(8)">8</ion-button>
+<ion-button color="tertiary" (click)="numBtn(9)">9</ion-button>
+<ion-button color="tertiary" (click)="mathOperation('/')">/</ion-button>
+</ion-grid>
+<br>
+<ion-grid>
+  <ion-button color="tertiary" (click)="numBtn(4)">4</ion-button>
+  <ion-button color="tertiary" (click)="numBtn(5)">5</ion-button>
+  <ion-button color="tertiary" (click)="numBtn(6)">6</ion-button>
+  <ion-button color="tertiary" (click)="mathOperation('*')">*</ion-button>
+</ion-grid>
+<br>
+<ion-grid>
+  <ion-button color="tertiary" (click)="numBtn(1)">1</ion-button>
+  <ion-button color="tertiary" (click)="numBtn(2)">2</ion-button>
+  <ion-button color="tertiary" (click)="numBtn(3)">3</ion-button>
+  <ion-button color="tertiary" (click)="mathOperation('-')">-</ion-button>
+</ion-grid>
+<br>
+<ion-grid>
+  <ion-button color="dark" (click)="clear()">C</ion-button>
+  <ion-button color="tertiary" (click)="numBtn(0)">0</ion-button>
+  <ion-button color="tertiary" (click)="equal()">=</ion-button>
+  <ion-button color="tertiary" (click)="mathOperation('+')">+</ion-button>
+</ion-grid>
 </ion-content>
