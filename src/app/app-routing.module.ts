@@ -29,7 +29,8 @@ const routes: Routes = [
   },
   {
     path: 'calculator',
-    loadChildren: () => import('./dashboard/calculator/calculator.module').then( m => m.CalculatorPageModule)
+    loadChildren: () => import('./dashboard/calculator/calculator.module').then( m => m.CalculatorPageModule),
+    canActivate:[AuthenticationService]
   },
 ];
 
