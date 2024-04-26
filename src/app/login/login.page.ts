@@ -1,0 +1,50 @@
+import { Component, OnInit } from '@angular/core';
+import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { AuthenticationService } from '../authentication.service';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.page.html',
+  styleUrls: ['./login.page.scss'],
+})
+export class LoginPage implements OnInit {
+
+  email: string = '';
+  password: string = '';
+  constructor(private awtenticate:AuthenticationService, private rawter:Router, private alertCtrl:AlertController) { }
+
+  ngOnInit() {
+  }
+
+  async logIn(){
+    this.awtenticate.login (this.email, this.password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      this.awtenticate.setAuthentication(true);
+      this.alertdsply('Success','Logged In Successfully!');
+      this.awtenticate.authenticated = true;
+      this.rawter.navigate(['dashboard']);
+    })
+    .catch((error) => {
+      const errorcode = error.code;
+      const errormsg = error.message;
+      console.log(error)
+      this.alertdsply('Error','Please put the correct email and password!')
+    });
+  }
+
+  async alertdsply(header: string, message: string ){
+    const alert = await this.alertCtrl.create({
+      header: header,
+      message: message,
+      buttons: ['OK']
+    });
+    await alert.present();
+  }
+
+  goToSignUp(){
+    this.rawter.navigate(['signup']);
+  }
+}
