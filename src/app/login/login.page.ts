@@ -18,12 +18,12 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  async logIn(){
+  logIn(){
     this.awtenticate.login (this.email, this.password)
     .then((userCredential) => {
       const user = userCredential.user;
       this.awtenticate.setAuthentication(true);
-      this.alertdsply('Success','Logged In Successfully!');
+      this.awtenticate.alertdsply('Success','Logged In Successfully!');
       this.awtenticate.authenticated = true;
       this.rawter.navigate(['dashboard']);
     })
@@ -31,17 +31,8 @@ export class LoginPage implements OnInit {
       const errorcode = error.code;
       const errormsg = error.message;
       console.log(error)
-      this.alertdsply('Error','Please put the correct email and password!')
+      this.awtenticate.alertdsply('Error','Please put the correct email and password!')
     });
-  }
-
-  async alertdsply(header: string, message: string ){
-    const alert = await this.alertCtrl.create({
-      header: header,
-      message: message,
-      buttons: ['OK']
-    });
-    await alert.present();
   }
 
   goToSignUp(){

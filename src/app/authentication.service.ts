@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, } from 'firebase/auth';
 
 @Injectable({
@@ -7,7 +8,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, } 
 })
 export class AuthenticationService {
   authenticated: boolean = false;
-  constructor(private rawter:Router) { }
+  constructor(private rawter:Router, private alertCtrl:AlertController) { }
   setAuthentication(auth:boolean) {
     if (auth) {
       localStorage.setItem("loggedIn","true");
@@ -25,5 +26,14 @@ export class AuthenticationService {
   async login(email: string, password: string) {
     const auth = getAuth();
     return await signInWithEmailAndPassword(auth, email, password);
+  }
+
+  async alertdsply(header: string, message: string ){
+    const alert = await this.alertCtrl.create({
+      header: header,
+      message: message,
+      buttons: ['OK']
+    });
+    await alert.present();
   }
 }

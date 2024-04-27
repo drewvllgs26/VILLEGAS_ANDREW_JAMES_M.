@@ -17,44 +17,36 @@ export class SignupPage implements OnInit {
   ngOnInit(){}
 
 
-  async signingUp(){
+  signingUp(){
     if (!this.email || !this.password || !this.retypepw){
-      this.alertdsply('Error','Please fill-out all the fields');
+      this.awtenticate.alertdsply('Error','Please fill-out all the fields');
       return;
     }
 
     if (this.password != this.retypepw){
-      this.alertdsply('Error','Password does not match');
+      this.awtenticate.alertdsply('Error','Password does not match');
       return;
     }
     
     if (!this.email.includes('.') || !this.email.includes('@')){
-      this.alertdsply('Error','Please put a valid email address');
+      this.awtenticate.alertdsply('Error','Please put a valid email address');
       return;
     }
 
     this.awtenticate.signup(this.email, this.password)
     .then((userCredential) => {
       const user = userCredential.user;
-      this.alertdsply('Success','Signed Up Succesfully!');
+      this.awtenticate.alertdsply('Success','Signed Up Succesfully!');
       this.rawter.navigate(['login']);
     })
     .catch((error) => {
       const errorcode = error.code;
       const errormsg = error.message;
-      this.alertdsply('Error','Already Signed Up!');
+      this.awtenticate.alertdsply('Error','Already Signed Up!');
     });
     this.email = '';
     this.password = '';
     this.retypepw = '';
-  }
-  async alertdsply(header: string, message: string ){
-    const alert = await this.alertCtrl.create({
-      header: header,
-      message: message,
-      buttons: ['OK']
-    });
-    await alert.present();
   }
 
 }
