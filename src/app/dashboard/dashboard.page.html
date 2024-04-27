@@ -1,71 +1,91 @@
 <ion-menu contentId="main-content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar class="header-clr">
       <ion-title>Dashboard</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
-    <ion-item>
-    <ion-icon name="log-out-outline"></ion-icon>
-    <a style="text-decoration: none; color: white; padding-left: 20px;" href="login">LOGOUT</a>
+  <ion-content class="ion-padding" class="dashboard-bg">
+    <ion-item class="dashboard-bg">
+    <ion-icon style="color: black;"name="log-out-outline"></ion-icon>
+    <a style="text-decoration: none; color: black; padding-left: 20px;" href="login">LOGOUT</a>
   </ion-item>
   </ion-content>
 </ion-menu>
 <div class="ion-page" id="main-content">
   <ion-header>
-    <ion-toolbar>
+    <ion-toolbar class="header-clr">
       <ion-buttons slot="start">
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>Dashboard</ion-title>
     </ion-toolbar>
   </ion-header>
+
   
-<ion-content>
-  <ion-card style="text-align: center;">
+<ion-content class="dashboard-bg">
+  <ion-card>
     <img alt="Developer Picture" src="https://scontent.fmnl25-1.fna.fbcdn.net/v/t39.30808-6/439831763_25092372437077351_573927826965419405_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFty3EYHfcyUAhZOaCp0ueme4t_eJ84h6Z7i394nziHpqTIndK-uHcuxNMxHhj2QBM4BzOxKBUk6YTci6V88BTM&_nc_ohc=naLam-J2d6sQ7kNvgGba809&_nc_ht=scontent.fmnl25-1.fna&oh=00_AfBdgcE6emdgaqdV7shZHmEtpk051eI_asgbZOxkH6Lc0Q&oe=6630946C" />
     <ion-card-header>
-      <ion-card-title style="color: darkslateblue; font-size: 31px; font-weight: 900; font-family: 'Franklin Gothic Medium';">Andrew James M. Villegas</ion-card-title>
-      <ion-card-subtitle style="color: rgb(115, 139, 216); font-family: sans-serif;">Student, Developer</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content style="color: white;">
+      <ion-card-title style=" font-size: 27px; font-weight: 900; font-family: 'Franklin Gothic Medium';">Andrew James M. Villegas</ion-card-title>
+      <ion-card-subtitle style="text-align:center; color: #174119; font-family: sans-serif;">Student, Developer</ion-card-subtitle>
+    <ion-card-content>
       A BSIT 2nd year college student from Pamantasan ng Lungsod ng Valenzuela (PLV) who aspires to be the next great programmer
     </ion-card-content>
+  </ion-card-header>
+  </ion-card>
+  <ion-card>
     <ion-card-header>
-      <ion-card-title style="color: darkslateblue; font-size: 20px; font-weight: 900; font-family:Arial, Helvetica, sans-serif">Hobbies, Likes, Talents</ion-card-title>
-      <ion-card-content style="color: white;">I can say that I have a hobby in collecting merchandises and I like listening to music in any genre, 
+      <ion-card-title>Hobbies, Likes, Talents</ion-card-title>
+      <ion-card-content>I can say that I have a hobby in collecting merchandises and I like listening to music in any genre, 
         playing video games which can really take my stress off. Also, I have a talent but... does making a sound like counting paper bills count?</ion-card-content>
     </ion-card-header>
     <ion-card-header>
-      <ion-card-title style="color: darkslateblue; font-size: 20px; font-weight: 900; font-family:Arial, Helvetica, sans-serif">Me in 5 Years</ion-card-title>
-      <ion-card-content style="color: white;">I can visualize myself already working to gain more experience in the field which can build and help me to be more knowledgeable
+      <ion-card-title>Me in 5 Years</ion-card-title>
+      <ion-card-content>I can visualize myself already working to gain more experience in the field which can build and help me to be more knowledgeable
         and to become a good team player along with my colleagues.
       </ion-card-content>
     </ion-card-header>
     <ion-card-header>
-      <ion-card-title style="color: darkslateblue; font-size: 20px; font-weight: 900; font-family:Arial, Helvetica, sans-serif">Strengths & Weaknesses</ion-card-title>
-      <ion-card-content style="color: white;">Strengths: Risk-Taker, Dedicated, Flexible<br>Weaknesses: Selos, Procrastination, Multitasking
+      <ion-card-title>Strengths & Weaknesses</ion-card-title>
+      <ion-card-content>Strengths: Risk-Taker, Dedicated, Flexible<br>Weaknesses: Selos, Procrastination, Multitasking
       </ion-card-content>
     </ion-card-header>
     <ion-card-header>
-      <ion-card-title style="color: darkslateblue; font-size: 20px; font-weight: 900; font-family:Arial, Helvetica, sans-serif">Motto</ion-card-title>
-      <ion-card-content style="color: white;">"Wag mo isipin ang HIRAP at PAGOD, isipin mo ang PANGARAP mo"
+      <ion-card-title>Motto</ion-card-title>
+      <ion-card-content>"Wag mo isipin ang HIRAP at PAGOD, isipin mo ang PANGARAP mo"
       </ion-card-content>
     </ion-card-header>
     <ion-card-header>
-      <ion-card-title style="color: darkslateblue; font-size: 20px; font-weight: 900; font-family:Arial, Helvetica, sans-serif">Love Language</ion-card-title>
-      <ion-card-content style="color: white;">Act of Service, Quality Time pero basta sa kanya handang iparamdam ang +99 na languages
+      <ion-card-title>Love Language</ion-card-title>
+      <ion-card-content>Act of Service, Quality Time pero basta sa kanya handang iparamdam ang +99 na languages
       </ion-card-content>
     </ion-card-header>
     <ion-card-header>
-      <ion-card-title style="color: darkslateblue; font-size: 20px; font-weight: 900; font-family:Arial, Helvetica, sans-serif">Kung Pagkain Ako</ion-card-title>
-      <ion-card-content style="color: white;">Kung magiging pagkain man ako, Bulalo sana para mahigop niya ang aking bone
+      <ion-card-title>Kung Pagkain Ako</ion-card-title>
+      <ion-card-content>Kung magiging pagkain man ako, Bulalo sana para mahigop niya ang aking bone
       </ion-card-content>
     </ion-card-header>
     <ion-card-header>
-      <ion-card-title style="color: darkslateblue; font-size: 20px; font-weight: 900; font-family:Arial, Helvetica, sans-serif">Pet Peeve</ion-card-title>
-      <ion-card-content style="color: white;">Yung nanghahampas kapag tumatawa, Smoking, Being left on seen, rude people, and more.
+      <ion-card-title>Pet Peeve</ion-card-title>
+      <ion-card-content>Yung nanghahampas kapag tumatawa, Smoking, Being left on seen, rude people, and more.
       </ion-card-content>
     </ion-card-header>
   </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success">
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="logo-facebook"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-instagram"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="logo-youtube"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>
+
