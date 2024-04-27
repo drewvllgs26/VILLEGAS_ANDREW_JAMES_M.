@@ -44,11 +44,9 @@ export class SignupPage implements OnInit {
       const errormsg = error.message;
       this.alertdsply('Error','Already Signed Up!');
     });
-
     this.email = '';
     this.password = '';
     this.retypepw = '';
-  
   }
   async alertdsply(header: string, message: string ){
     const alert = await this.alertCtrl.create({
