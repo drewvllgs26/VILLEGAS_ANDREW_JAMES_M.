@@ -19,20 +19,7 @@ export class LoginPage implements OnInit {
   }
 
   logIn(){
-    this.awtenticate.login (this.email, this.password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      this.awtenticate.setAuthentication(true);
-      this.awtenticate.alertdsply('Success','Logged In Successfully!');
-      this.awtenticate.authenticated = true;
-      this.rawter.navigate(['dashboard']);
-    })
-    .catch((error) => {
-      const errorcode = error.code;
-      const errormsg = error.message;
-      console.log(error)
-      this.awtenticate.alertdsply('Error','Please put the correct email and password!')
-    });
+    this.awtenticate.login(this.email, this.password)
   }
 
   goToSignUp(){

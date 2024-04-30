@@ -18,32 +18,7 @@ export class SignupPage implements OnInit {
 
 
   signingUp(){
-    if (!this.email || !this.password || !this.retypepw){
-      this.awtenticate.alertdsply('Error','Please fill-out all the fields');
-      return;
-    }
-
-    if (this.password != this.retypepw){
-      this.awtenticate.alertdsply('Error','Password does not match');
-      return;
-    }
-    
-    if (!this.email.includes('.') || !this.email.includes('@')){
-      this.awtenticate.alertdsply('Error','Please put a valid email address');
-      return;
-    }
-
-    this.awtenticate.signup(this.email, this.password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      this.awtenticate.alertdsply('Success','Signed Up Succesfully!');
-      this.rawter.navigate(['login']);
-    })
-    .catch((error) => {
-      const errorcode = error.code;
-      const errormsg = error.message;
-      this.awtenticate.alertdsply('Error','Already Signed Up!');
-    });
+    this.awtenticate.signup(this.email, this.password, this.retypepw);
     this.email = '';
     this.password = '';
     this.retypepw = '';
