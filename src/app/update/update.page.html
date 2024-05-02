@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true">
+  <div class="background">
+    <ion-icon name="arrow-back-outline"(click)="goToHome()"></ion-icon>
+    <h1>Update Data</h1>
+    <ion-card>
+      <ion-input style="padding-left:20px" label="Game Name" [(ngModel)]="users.gameName" type="text" label-placement="floating" fill="solid"></ion-input>
+      <ion-input style="padding-left:20px" label="Genre" [(ngModel)]="users.genre" type="text" label-placement="floating" fill="solid"></ion-input>
+      <ion-input style="padding-left:20px" label="Price" placeholder="Please enter the price" [(ngModel)]="users.price" type="number" label-placement="floating" fill="solid"></ion-input>
+      <ion-input style="padding-left:20px" label="Quantity" [(ngModel)]="users.quantity" type="number" label-placement="floating" fill="solid"></ion-input>
+      <ion-input style="padding-left:20px" label="Date Release" [(ngModel)]="users.dateRelease" label-placement="floating" fill="solid"></ion-input>
+      <!-- <ion-input style="padding-left:20px" label="Rating" [(ngModel)]="users.rating" type="number" label-placement="floating" fill="solid"></ion-input> -->
+      <ion-select [(ngModel)]="users.rating">
+        <div slot="label" style="padding-left:17px">Rating</div>
+        <ion-select-option *ngFor="let rating of ratings" [value]="rating">{{rating}}</ion-select-option>
+      </ion-select>
+    </ion-card>
+    <ion-toggle [(ngModel)]="users.isAvailable">Available</ion-toggle><br>
+    
+
+    <ion-button color="success" (click)="updateData()">UPDATE</ion-button>
+</div>
+</ion-content>

@@ -1,0 +1,12 @@
+<ion-content [fullscreen]="true">
+  <div class="background">
+    <h1>WELCOME!</h1>
+  <ion-card>
+    <ion-input style="padding-left:20px" label="Email" [(ngModel)]="email" type="text" label-placement="floating" fill="solid"></ion-input>
+    <ion-input style="padding-left:20px" label="Password" [(ngModel)]="password" type="password" label-placement="floating" fill="solid"></ion-input>
+  </ion-card>
+  <ion-button color="tertiary" (click)="logIn()">Login</ion-button>
+  <p>No account?</p>
+  <ion-button color="success" (click)="goToSignUp()">Sign Up</ion-button>
+</div>
+</ion-content>

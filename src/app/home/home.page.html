@@ -1,0 +1,45 @@
+<ion-menu contentId="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar class="header-clr">
+      <ion-title>GAME DATA</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding" class="dashboard-bg">
+    <ion-item class="dashboard-bg">
+    <ion-icon style="color: black;"name="log-out-outline" (click)="logOut()"></ion-icon>
+    <a style="text-decoration: none; color: black; padding-left: 20px; font-family: Opensauce; margin-top: 10px;" (click)="logOut()">LOGOUT</a>
+  </ion-item>
+  </ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header class="ion-no-border">
+    <ion-toolbar class="header-clr">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content class="dashboard-bg">
+    <h1>game data</h1>
+    <ion-card *ngFor="let user of userList">
+      <ion-card-header>
+        <ion-card-title>{{user.gameName}} </ion-card-title>
+        <ion-card-subtitle>{{user.genre}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        Price: {{user.price}}<br>
+        Quantity: {{user.quantity}}<br>
+        Rating: {{user.rating}}<br>
+        Release Date: {{user.dateRelease}}<br>
+        Availabiliy: {{user.isAvailable}}
+      </ion-card-content>
+      <ion-button fill="clear" style="float: right;" (click)="update(user)"><ion-icon name="create"></ion-icon></ion-button>
+      <ion-button fill="clear" style="float: right;" (click)="delete(user)"><ion-icon name="trash"></ion-icon></ion-button>
+    </ion-card>
+    <div class="addBtn">
+    <ion-icon name="add-circle" (click)="addData()"></ion-icon>
+    </div>
+
+
+</ion-content>
