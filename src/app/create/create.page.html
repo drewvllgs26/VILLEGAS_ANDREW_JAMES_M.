@@ -14,7 +14,7 @@
         <ion-select-option *ngFor="let rating of ratings" [value]="rating">{{rating}}</ion-select-option>
       </ion-select>
     </ion-card>
-    <ion-toggle [(ngModel)]="users.isAvailable">Available</ion-toggle><br>
+    <ion-toggle color="tertiary" [(ngModel)]="users.isAvailable">Available</ion-toggle><br>
     
 
     <ion-button color="success" (click)="inputData()">CREATE</ion-button>
